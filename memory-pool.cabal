@@ -3,14 +3,14 @@ version:             0.1.0.0
 synopsis:            Short description
 description:         Lock-free threadsafe pinned memory pool manager
 homepage:            https://github.com/input-output-hk/memory-pool
-license:             BSD3
+license:             Apache-2.0
+license-file:        LICENSE
 author:              IOHK
 maintainer:          operations@iohk.io
-copyright:           2022 IOHK
 category:            Memory
 build-type:          Simple
 extra-source-files:  README.md
-                   , CHANGELOG.md
+extra-doc-files:     CHANGELOG.md
 cabal-version:       1.18
 tested-with:         GHC == 8.0.2
                    , GHC == 8.2.2
