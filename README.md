@@ -8,8 +8,8 @@ Memory management utility that allows allocating large chunks of memory at once 
 using it at a fine grain smaller block level. There is a restriction on the blocks of
 memory to having the same size in a single pool.
 
-This package was designed for Cardano cryptocurrency, but it is a general purpose Haskell
-tool. The particular use cases in Cardano is to allocate one large page of memlocked
+This package was designed for Cardano blockchain, but it is a general purpose Haskell
+library. The particular use cases in Cardano is to allocate one large page of memlocked
 memory using libsodium and treat it as many smaller regions for secure storage and cleanup
 of private keys.
 
