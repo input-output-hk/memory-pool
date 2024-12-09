@@ -184,7 +184,7 @@ jobs:
       # older ghc versions do not like some haddock examples
       # linker on MacOS-13 complains too
       # windows as always results in non-deterministic nonsense, so it will likely get disabled soon too.
-      if: contains(fromJSON('["8.6.5", "8.8.4", "8.10.7", "9.0.2"]'), matrix.ghc) != true && matrix.os != 'macOS-13'
+      if: contains(fromJSON('["8.0.2", "8.2.2", "8.4.4", "8.6.5", "8.8.4", "8.10.7", "9.0.2"]'), matrix.ghc) != true && matrix.os != 'macOS-13'
       run: |
         set -ex
         cabal install doctest --ignore-project --overwrite-policy=always

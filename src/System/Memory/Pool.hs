@@ -58,7 +58,7 @@ data Block (n :: Nat) = Block
 
 -- | Number of bytes in a `Block`
 blockByteCount :: KnownNat n => Block n -> Int
-blockByteCount = fromInteger . natVal
+blockByteCount = fromIntegral . natVal
 
 -- | Internal helper type that manages each individual page. This is essentially a mutable
 -- linked list, which contains a memory buffer, a bit array that tracks which blocks in

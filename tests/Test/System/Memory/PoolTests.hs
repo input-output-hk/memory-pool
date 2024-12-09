@@ -20,10 +20,10 @@ import Data.Word
 import Foreign.ForeignPtr
 import Foreign.Ptr
 import Foreign.Storable
-import GHC.TypeNats
+import GHC.TypeLits
 import System.Mem (performGC)
 import System.Memory.Pool
-import System.Random.Stateful
+import System.Random
 import Test.QuickCheck.Monadic
 
 poolTests :: TestTree
@@ -225,7 +225,7 @@ propPoolAllocateAndFinalize block (Positive n) numBlocks16 emptyByte fullByte =
                     -- fill the newly allocated block
                     setPtr (castPtr ptr) (blockByteCount block) fullByte
                   -- manually finalize every other block and let the GC to pick the rest
-                  shouldFinalize <- uniformM globalStdGen
+                  shouldFinalize <- randomIO
                   when shouldFinalize $ finalizeForeignPtr fp
                   loop
             )

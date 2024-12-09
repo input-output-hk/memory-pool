@@ -1,0 +1,6 @@
+snapshot: lts-16.31
+packages:
+- .
+extra-deps:
+- pvar-1.0.0.0@sha256:3d4a6855b0960baee78f6956f082eb8aa1cede52d2955b7faef186d1133f7964,1893
+- primitive-0.7.1.0@sha256:cef1cfd0eade2be8e276520c897e20ebe3d4a7371d5a06c82648af4181cab326,2728
